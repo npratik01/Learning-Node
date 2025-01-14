@@ -15,5 +15,8 @@
     "url": "https://github.com/npratik01/Learning-Node/issues"
   },
   "homepage": "https://github.com/npratik01/Learning-Node#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
