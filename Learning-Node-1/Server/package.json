@@ -15,5 +15,8 @@
     "url": "https://github.com/npratik01/Learning-Node/issues"
   },
   "homepage": "https://github.com/npratik01/Learning-Node#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "url": "^0.11.4"
+  }
 }
