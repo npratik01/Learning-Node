@@ -8,6 +8,15 @@ const PORT = 8000;
 // Middleware - Plugin
 app.use(express.urlencoded({extended: false}));
 
+app.use((req, res, next) => {
+  fs.appendFile("log.txt", `\n${Date.now()}: ${req.ip} ${req.method}: ${req.path}\n`, (err, data) => {next()});
+})
+
+app.use((req, res, next) => {
+  console.log("Hello from middleware2", req.myUserName);
+  //return res.end("Hey");
+  next(); // for calling next function
+})
 
 //Routes:
 
