@@ -5,3 +5,7 @@
 1736983962421: GET: /api/users/1001
 
 1736983968846: GET: /api/users/1003
+
+1736984504021: GET: /api/users
+
+1736984720042: ::1 GET: /api/users
