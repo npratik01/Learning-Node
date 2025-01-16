@@ -9,3 +9,19 @@
 1736984504021: GET: /api/users
 
 1736984720042: ::1 GET: /api/users
+
+1736986119598: ::1 POST: /api/users
+
+1736986469119: ::1 POST: /api/users
+
+1736986479328: ::1 POST: /api/users
+
+1736986483424: ::1 POST: /api/users
+
+1736986490166: ::1 POST: /api/users
+
+1736986525401: ::1 POST: /api/users
+
+1736986530843: ::1 POST: /api/users
+
+1736986534626: ::1 POST: /api/users
