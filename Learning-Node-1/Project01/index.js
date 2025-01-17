@@ -61,7 +61,7 @@ app.post('/api/users', (req, res) => {
   
 });
 
-
+console.log("Pratik");
 
 
 app.listen(PORT, () => console.log(`Server Started at PORT:${PORT}`));
