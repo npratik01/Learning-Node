@@ -45,3 +45,23 @@
 1737174430022: ::1 GET: /users
 
 1737174443704: ::1 GET: /users
+
+1737177109780: ::1 GET: /users
+
+1737177109897: ::1 GET: /favicon.ico
+
+1737191994689: ::1 GET: /
+
+1737191998636: ::1 GET: /users
+
+1737191998752: ::1 GET: /favicon.ico
+
+1737192065798: ::1 POST: /api/users
+
+1737192070896: ::1 GET: /users
+
+1737192179787: ::1 GET: /api/users
+
+1737192500376: ::1 DELETE: /api/users/678b2b2eebcdca74fb0ef079
+
+1737192562725: ::1 GET: /users

@@ -60,32 +60,36 @@ app.get("/users", async (req, res) => {
   const allDbUsers = await User.find({});
   const html = `
   <ul>
-    ${allDbUsers.map((user) => `<li>${user.first_name} - ${user.email}</li>`).join("")}
+    ${allDbUsers.map((user) => `<li>${user.firstName} - ${user.email}</li>`).join("")}
   </ul>`;
 
   res.send(html);
 });
 
 //REST API
-app.get("/api/users", (req, res) => {
+app.get("/api/users", async (req, res) => {
+  const allDbUsers = await User.find({});
   res.setHeader("X-myName", "Pratik Nikam");
-  return res.json(users);
+  return res.json(allDbUsers);
 });
 
 app
   .route("/api/users/:id")
-  .get((req, res) => {
-    const id = Number(req.params.id);
-    const user = users.find((user) => user.id === id);
+  .get(async (req, res) => {
+    // const id = Number(req.params.id);
+    // const user = users.find((user) => user.id === id);
+    const user = await User.findById(req.params.id);
     if (!user) return res.status(404).json({ error: "user not found" });
     return res.json(user);
   })
-  .patch((req, res) => {
+  .patch(async (req, res) => {
     // Edit the User with id
+    await User.findByIdAndUpdate(req.params.id, {lastName: "Changed"});
     return res.json({ status: "pending" });
   })
-  .delete((req, res) => {
+  .delete(async (req, res) => {
     // Delete the User with id
+    await User.findByIdAndDelete(req.params.id);
     return res.json({ status: "pending" });
   });
 
