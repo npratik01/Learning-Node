@@ -65,3 +65,11 @@
 1737192500376: ::1 DELETE: /api/users/678b2b2eebcdca74fb0ef079
 
 1737192562725: ::1 GET: /users
+
+1737210816198: ::1 GET: /api/users
+
+1737210816340: ::1 GET: /favicon.ico
+
+1737211187435: ::1 GET: /api/users
+
+1737211187471: ::1 POST: /api/users
