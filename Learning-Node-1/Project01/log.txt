@@ -73,3 +73,7 @@
 1737211187435: ::1 GET: /api/users
 
 1737211187471: ::1 POST: /api/users
+
+1737279239532: ::1 GET: /api/users
+
+1737279302927: ::1 POST: /api/users
