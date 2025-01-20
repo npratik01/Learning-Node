@@ -13,11 +13,11 @@ app.use(express.json());
 
 app.use("/url", urlRoute);
 
-app.get("./:nanoid", async (req, res) => {
-  const nanoid = req.params.nanoid;
-  await URL.findOneAndUpdate(
+app.get("./:shortId", async (req, res) => {
+  const shortId = req.params.shortId;
+  const entry = await URL.findOneAndUpdate(
     {
-      nanoid,
+      shortId,
     },
     {
       $push: {
