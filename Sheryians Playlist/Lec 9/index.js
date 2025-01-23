@@ -15,6 +15,12 @@ app.get('/', (req, res) => {
   })
 });
 
+app.get('/file/:fileName', (req, res) => {
+  fs.readFile(`./files/${req.params.fileName}`, "utf-8", (err, filedata) => {
+    res.render("show", {fileName: req.params.fileName, filedata: filedata});
+  })
+});
+
 app.post('/create', (req, res) => {
   fs.writeFile(`./files/${req.body.title.split(' ').join('')}.txt`, req.body.details, (err) => {
     res.redirect("/");
