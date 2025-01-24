@@ -1,19 +1,24 @@
 const express = require("express");
 const app = express();
+const bcrypt = require("bcrypt");
+const jwt = require('jsonwebtoken');
+const cookieParser = require("cookie-parser");
 const PORT = 8000;
 
-app.use
+app.use(cookieParser());
 
 app.get("/", (req, res) => {
-  res.cookie("name", "Pratik");
+  let token = jwt.sign({email: "pratiknikam358@gmail.com"}, "secret");
+  res.cookie("token", token);
+  console.log(token);
   res.send("done");
 });
 
 app.get("/read", (req, res) => {
-  console.log(req.cookies);
-  res.send("read page");
-});
+  let data = jwt.verify(req.cookies.token, "secret");
+  console.log(data);
+})
 
 app.listen(PORT, () => {
   console.log(`Server started at PORT ${PORT}`);
-})
+});
